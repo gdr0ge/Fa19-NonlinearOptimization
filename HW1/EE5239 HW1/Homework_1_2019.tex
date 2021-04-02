@@ -1,0 +1,146 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{amsmath,amssymb,amsthm,epsfig}
+\usepackage{graphpap}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\argmin}{argmin}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bbH}{\bar\bH}
+\newcommand{\bbV}{\bar\bV}
+\newcommand{\bbU}{\bar\bU}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\cC}{\mathcal{C}}
+
+
+ \setlength\topmargin{-0.5in}
+ \setlength\headsep{0in}
+ \setlength\textwidth{6.5in}
+ \setlength\textheight{9in}
+ \setlength\oddsidemargin{0in}
+  \setlength\evensidemargin{0in}
+\DeclareMathOperator{\s.t.}{s.t.}
+\usepackage[pdftex]{hyperref}
+
+\title{EE 5239 Nonlinear Optimization Homework 1 Cover Sheet}
+\date{}
+\begin{document}
+\maketitle
+
+
+\noindent Instructor name: Mingyi Hong \hspace{1.8 in} Student name: \underline{\hspace{1.5in}} \\
+
+\vspace{1in}
+
+\noindent \fbox{\parbox{\textwidth}{
+		\begin{itemize}
+			\item Date assigned: Thursday 9/06/2019
+			\item Date due: Tuesday 9/17/2019,  at 2:30PM
+			\item This cover sheet must be signed and submitted along with the homework answers on additional sheets.
+			\item By submitting this homework with my name affixed above,
+			\begin{itemize}
+				\item I understand that late homework will not be accepted,
+				\item I acknowledge that I am aware of the University's policy concerning academic misconduct (appended below),
+				\item I attest that the work I am submitting for this homework assignment is solely my own, and
+				\item I understand that suspiciously similar homework submitted by multiple individuals will be reported to the Dean of Students Office for investigation.
+			\end{itemize}
+			
+			\item Academic Misconduct in any form is in violation of the University's Disciplinary Regulations and will not be tolerated.  This includes, but is not limited to: copying or sharing answers on tests or assignments, plagiarism, having someone else do your academic work or working with someone on homework when not permitted to do so by the instructor.  Depending on the act, a student could receive an F grade on the test/assignment, F grade for the course, and could be suspended or expelled from the University. 
+		\end{itemize}
+	}}
+
+
+\clearpage
+
+\section{Reading} 
+\begin{itemize}
+\item Reading: Textbook Section 1.1
+\item Appendix A. 
+\end{itemize}
+
+
+\section{Problems}
+
+\begin{enumerate}
+\item Exercise 1.1.1 in the textbook
+\item Exercise 1.1.2 in the textbook
+\item Exercise 1.1.3 in the textbook
+%\item Exercise 1.1.6 in the textbook
+\item Show that a second-order continuously differentiable function $f(x):\mathbb{R}\to \mathbb{R}$ is convex {\it if and only if} its second-order derivative is non-negative.
+
+	  \item Let $x\in\mathbb{R}^n$ be a vector. Explain why the following two quantities are norms
+	  $$\|x\|_1=\sum_{i=1}^{n}|x_i|,\quad \|x\|_{\infty} = \max_{i}|x_i|.$$
+	  
+	   \item Let $x, y\in\mathbb{R}^n$. Suppose that $x$ and $y$ are orthogonal, i.e., $\langle x, y\rangle = x^T y = 0$. Show that the following {\bf Pythagorean Theorem} is true (note $\langle x, x\rangle = \|x\|_2$)
+	   $$\|x+y\|_2^2 = \|x\|_2^2+\|y\|_2^2.$$
+	   
+	   %\item (10 points) Let $x, y\in\mathbb{R}^n$. Show that the following vector $z$ is orthogonal to $x$
+	   %$$z = y- \frac{\langle x, y\rangle}{\langle x, x\rangle}x. $$
+	   
+	   \item Show that the Cauchy-Swarts inequality is true, i.e., for any $x,y\in\mathbb{R}^n$, the following is true
+	   $$\langle x, y\rangle\le \|x\|_2\|y\|_2.$$
+	   (Hint: Applying the Pythagorean Theorem to the vector $x$ and $z$, where $z$ is given in the previous problem. )
+	   
+	  
+	    \item Please find the gradient and the Hessian for the following functions
+	    \begin{align*}
+	    &f(x)= \frac{1}{2}\|\bx-\bb\|^2, \; f(x)=\frac{1}{2}\|\mathbf{a}^T \bx-\bb\|^2, \; \quad f(x)=\log(1+\mathbf{a}^T\bx),\; f(x)= \exp\{\bb^T\bx+\mathbf{c}\}\nonumber\\
+	    \end{align*}
+	    
+	    \item Please prove the first and second-order Mean Value Theorem. That is, suppose $f(\cdot)$ is a smooth function. Then for any $x,y$ in the domain of $f(\cdot)$, the following holds true:
+\begin{align*}
+&{f(x)-f(y)=f'({x}^{\rm mid})(x-y)}, \\
+&{f(x)-f(y)=f'(y)(x-y)+\frac{1}{2}(x-y)^2 f''(x^{\rm mid})},
+\end{align*}
+for some $x^{\rm mid}$ that lies between the line segments between $x,y$. 
+\end{enumerate}
+
+
+
+
+
+
+\noindent {\bf Note 1}: All problems are referred using version 2 of the textbook. For those who use version 3 of the book, please see the scanned version of the HW assignment posted on the Moodle. 
+
+\noindent {\bf Note 2}: You are encouraged to type the solution of HW 1. You can use either Latex or Word. The Latex file for this problem has been provided. 
+
+\end{document}
